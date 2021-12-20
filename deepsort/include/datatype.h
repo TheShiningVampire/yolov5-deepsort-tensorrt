@@ -25,8 +25,8 @@ typedef struct DetectBox {
 
 #include <cstddef>
 #include <vector>
-#include <Eigen/Core>
-#include <Eigen/Dense>
+#include <eigen3/Eigen/Core>
+#include <eigen3/Eigen/Dense>
 typedef struct CLSCONF {
     CLSCONF() {
         this->cls = -1;

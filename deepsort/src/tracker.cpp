@@ -32,6 +32,13 @@ void tracker::predict()
     }
 }
 
+void tracker::traj_predict()
+{
+  for (Track & track:tracks) {
+        track.traj_predict(kf);
+    }
+}
+
 void tracker::update(const DETECTIONS & detections)
 {
     TRACHER_MATCHD res;

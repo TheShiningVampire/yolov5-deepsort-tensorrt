@@ -30,6 +30,7 @@ public:
             float max_iou_distance = 0.7,
             int max_age = 200, int n_init=20);
     void predict();
+    void traj_predict();
     void update(const DETECTIONS& detections);
     void update(const DETECTIONSV2& detectionsv2);
     typedef DYNAMICM (tracker::* GATED_METRIC_FUNC)(

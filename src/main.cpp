@@ -18,29 +18,38 @@ int main(){
 	map<int,vector<int>> personstate;
 	map<int,int> classidmap;
 	bool is_first = true;
-	char* yolo_engine = "";
-	char* sort_engine = "";
-	float conf_thre = 0.4;
+	char* yolo_engine = "/home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/resources/yolov5s_v5.engine";
+	char* sort_engine = "/home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/resources/deepsort.engine";
+	float conf_thre = 0.35;
+
 	Trtyolosort yosort(yolo_engine,sort_engine);
 	VideoCapture capture;
 	cv::Mat frame;
-	frame = capture.open("");
+	frame = capture.open("/dev/video0");
+	// frame = capture.open("../../../Datasets/test_video.mp4");
+
+
 	if (!capture.isOpened()){
 		std::cout<<"can not open"<<std::endl;
 		return -1 ;
 	}
 	capture.read(frame);
 	std::vector<DetectBox> det;
+
+	// std::vector<DetectBox> traj_ends;
+	std::vector<std::vector<DetectBox>> traj_ends;
+
 	auto start_draw_time = std::chrono::system_clock::now();
 	
 	clock_t start_draw,end_draw;
 	start_draw = clock();
 	int i = 0;
+
 	while(capture.read(frame)){
 		if (i%3==0){
 		//std::cout<<"origin img size:"<<frame.cols<<" "<<frame.rows<<std::endl;
 		auto start = std::chrono::system_clock::now();
-		yosort.TrtDetect(frame,conf_thre,det);
+		yosort.TrtDetect(frame,conf_thre,det,traj_ends);
 		auto end = std::chrono::system_clock::now();
 		int delay_infer = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
 		std::cout  << "delay_infer:" << delay_infer << "ms" << std::endl;

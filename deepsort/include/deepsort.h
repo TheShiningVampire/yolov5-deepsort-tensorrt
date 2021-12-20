@@ -17,7 +17,7 @@ public:
     ~DeepSort();
 
 public:
-    void sort(cv::Mat& frame, vector<DetectBox>& dets);
+    void sort(cv::Mat& frame, vector<DetectBox>& dets, vector<vector<DetectBox>>& traj);
 
 private:
     void sort(cv::Mat& frame, DETECTIONS& detections);
@@ -39,6 +39,10 @@ private:
 private:
     vector<RESULT_DATA> result;
     vector<std::pair<CLSCONF, DETECTBOX>> results;
+    // vector<RESULT_DATA> end_point;
+    // vector<std::pair<CLSCONF, DETECTBOX>> end_points;
+    vector<vector<RESULT_DATA>> trajectory_point;
+    vector<vector<std::pair<CLSCONF, DETECTBOX>>> trajectory_points;
     tracker* objTracker;
     FeatureTensor* featureExtractor;
     ILogger* gLogger;

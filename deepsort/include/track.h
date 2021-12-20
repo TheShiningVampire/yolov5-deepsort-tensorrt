@@ -5,6 +5,7 @@
 #include "kalmanfilter.h"
 #include "datatype.h"
 #include "model.hpp"
+#include <vector>
 
 class Track
 {
@@ -61,6 +62,7 @@ public:
     Track(KAL_MEAN& mean, KAL_COVA& covariance, int track_id,
           int n_init, int max_age, const FEATURE& feature, int cls, float conf);
     void predit(KalmanFilter* kf);
+    void traj_predict(KalmanFilter* kf);
     void update(KalmanFilter* const kf, const DETECTION_ROW &detection);
     void update(KalmanFilter* const kf, const DETECTION_ROW & detection, CLSCONF pair_det);
     void mark_missed();
@@ -68,11 +70,15 @@ public:
     bool is_deleted();
     bool is_tentative();
     DETECTBOX to_tlwh();
+    std::vector<DETECTBOX> to_tlwh_traj_pred();
     int time_since_update;
     int track_id;
     FEATURESS features;
     KAL_MEAN mean;
     KAL_COVA covariance;
+    KAL_MEAN future_mean;
+    KAL_COVA future_covariance;
+    std::vector<KAL_MEAN> mean_traj;
 
     int hits;
     int age;

@@ -1,5 +1,5 @@
 #include "kalmanfilter.h"
-#include <Eigen/Cholesky>
+#include <eigen3/Eigen/Cholesky>
 #include <iostream>
 
 const double KalmanFilter::chi2inv95[10] = {
