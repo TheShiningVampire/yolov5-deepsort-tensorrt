@@ -28,7 +28,7 @@ public:
 	Trtyolosort(char *yolo_engine_path,char *sort_engine_path);
 	// detect and show
 	int TrtDetect(cv::Mat &frame,float &conf_thresh,std::vector<DetectBox> &det,std::vector<std::vector<DetectBox>> &traj);
-	void showDetection(cv::Mat& img, std::vector<DetectBox>& boxes, std::vector<std::vector<DetectBox>>& trajectory_boxes, cv::VideoWriter& writer);
+	void showDetection(cv::Mat& img, std::vector<DetectBox>& boxes, std::vector<std::vector<DetectBox>>& trajectory_boxes); //, cv::VideoWriter& writer);
 
 private:
 	char* yolo_engine_path_ = NULL;

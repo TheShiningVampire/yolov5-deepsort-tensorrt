@@ -73,29 +73,29 @@ CMakeFiles/yolosort.dir/src/main.cpp.o: CMakeFiles/yolosort.dir/flags.make
 CMakeFiles/yolosort.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/yolosort.dir/src/main.cpp.o: CMakeFiles/yolosort.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/yolosort.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/yolosort.dir/src/main.cpp.o -MF CMakeFiles/yolosort.dir/src/main.cpp.o.d -o CMakeFiles/yolosort.dir/src/main.cpp.o -c /home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/src/main.cpp
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/yolosort.dir/src/main.cpp.o -MF CMakeFiles/yolosort.dir/src/main.cpp.o.d -o CMakeFiles/yolosort.dir/src/main.cpp.o -c /home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/src/main.cpp
 
 CMakeFiles/yolosort.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yolosort.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/src/main.cpp > CMakeFiles/yolosort.dir/src/main.cpp.i
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/src/main.cpp > CMakeFiles/yolosort.dir/src/main.cpp.i
 
 CMakeFiles/yolosort.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yolosort.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/src/main.cpp -o CMakeFiles/yolosort.dir/src/main.cpp.s
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/src/main.cpp -o CMakeFiles/yolosort.dir/src/main.cpp.s
 
 CMakeFiles/yolosort.dir/src/manager.cpp.o: CMakeFiles/yolosort.dir/flags.make
 CMakeFiles/yolosort.dir/src/manager.cpp.o: ../src/manager.cpp
 CMakeFiles/yolosort.dir/src/manager.cpp.o: CMakeFiles/yolosort.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/yolosort.dir/src/manager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/yolosort.dir/src/manager.cpp.o -MF CMakeFiles/yolosort.dir/src/manager.cpp.o.d -o CMakeFiles/yolosort.dir/src/manager.cpp.o -c /home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/src/manager.cpp
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/yolosort.dir/src/manager.cpp.o -MF CMakeFiles/yolosort.dir/src/manager.cpp.o.d -o CMakeFiles/yolosort.dir/src/manager.cpp.o -c /home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/src/manager.cpp
 
 CMakeFiles/yolosort.dir/src/manager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yolosort.dir/src/manager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/src/manager.cpp > CMakeFiles/yolosort.dir/src/manager.cpp.i
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/src/manager.cpp > CMakeFiles/yolosort.dir/src/manager.cpp.i
 
 CMakeFiles/yolosort.dir/src/manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yolosort.dir/src/manager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/src/manager.cpp -o CMakeFiles/yolosort.dir/src/manager.cpp.s
+	/usr/bin/g++-7 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/src/manager.cpp -o CMakeFiles/yolosort.dir/src/manager.cpp.s
 
 # Object files for target yolosort
 yolosort_OBJECTS = \

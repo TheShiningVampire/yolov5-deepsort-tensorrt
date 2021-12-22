@@ -73,20 +73,18 @@ void Track::traj_predict(KalmanFilter * kf)
 
     mean_traj.clear();
 
-    if (this->hits > 30)
-    {
+    
 
-        std::cout << "hits " << this->hits << std::endl;
-        for (int j = 0; j<8 ; j++)
-        {   
-            for(int i = 0; i < 3; i++)
-            {
-                kf->predict(this->future_mean, this->future_covariance);
-            }
-
-            mean_traj.push_back(this->future_mean);
+    for (int j = 0; j<8 ; j++)
+    {   
+        for(int i = 0; i < 3; i++)
+        {
+            kf->predict(this->future_mean, this->future_covariance);
         }
+
+        mean_traj.push_back(this->future_mean);
     }
+
 }
 
 void Track::update(KalmanFilter * const kf, const DETECTION_ROW & detection)

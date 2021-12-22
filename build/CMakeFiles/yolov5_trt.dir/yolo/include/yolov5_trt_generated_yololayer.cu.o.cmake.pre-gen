@@ -64,7 +64,7 @@ set(cmake_dependency_file "/home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_
 set(CUDA_make2cmake "/home/volta03/.local/lib/python3.6/site-packages/cmake/data/share/cmake-3.22/Modules/FindCUDA/make2cmake.cmake") # path
 set(CUDA_parse_cubin "/home/volta03/.local/lib/python3.6/site-packages/cmake/data/share/cmake-3.22/Modules/FindCUDA/parse_cubin.cmake") # path
 set(build_cubin OFF) # bool
-set(CUDA_HOST_COMPILER "/usr/bin/cc") # path
+set(CUDA_HOST_COMPILER "/usr/bin/gcc-7") # path
 # We won't actually use these variables for now, but we need to set this, in
 # order to force this file to be run again if it changes.
 set(generated_file_path "/home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/build/CMakeFiles/yolov5_trt.dir/yolo/include/.") # path

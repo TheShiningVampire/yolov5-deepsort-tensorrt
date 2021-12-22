@@ -20,7 +20,7 @@ int main(){
 	bool is_first = true;
 	char* yolo_engine = "/home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/resources/yolov5s_v5.engine";
 	char* sort_engine = "/home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/resources/deepsort.engine";
-	float conf_thre = 0.35;
+	float conf_thre = 0.4;
 
 	Trtyolosort yosort(yolo_engine,sort_engine);
 	VideoCapture capture;
@@ -45,6 +45,18 @@ int main(){
 	start_draw = clock();
 	int i = 0;
 
+	// // Video save path
+	// std::string video_save_path = "/home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/inference/test.avi";
+	
+	// // Create a video writer object
+	// cv::VideoWriter writer(video_save_path,cv::VideoWriter::fourcc('M','J','P','G'),30,cv::Size(frame.cols,frame.rows));
+
+	// // Check if the video writer object is created successfully
+	// if (!writer.isOpened()){	
+	// 	std::cout << "Could not open the output video for write: " << video_save_path << std::endl;
+	// 	return -1;
+	// }
+
 	while(capture.read(frame)){
 		if (i%3==0){
 		//std::cout<<"origin img size:"<<frame.cols<<" "<<frame.rows<<std::endl;
@@ -53,10 +65,16 @@ int main(){
 		auto end = std::chrono::system_clock::now();
 		int delay_infer = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
 		std::cout  << "delay_infer:" << delay_infer << "ms" << std::endl;
+		
+		// Write the frame into the file
+		// writer.write(frame);
+
+		
 		}
 		i++;
 	}
 	capture.release();
-	return 0;
 	
+	// writer.release();
+	return 0;
 }
