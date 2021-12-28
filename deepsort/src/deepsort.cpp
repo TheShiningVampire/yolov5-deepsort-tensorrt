@@ -7,7 +7,7 @@ DeepSort::DeepSort(std::string modelPath, int batchSize, int featureDim, int gpu
     this->featureDim = featureDim;
     this->imgShape = cv::Size(64, 128);
     this->maxBudget = 100;
-    this->maxCosineDist = 0.2;
+    this->maxCosineDist = 0.25;
     this->gLogger = gLogger;
     init();
 }

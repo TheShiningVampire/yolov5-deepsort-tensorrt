@@ -27,6 +27,7 @@ SET(CUDA_NVCC_DEPEND
  "/usr/include/aarch64-linux-gnu/bits/local_lim.h"
  "/usr/include/aarch64-linux-gnu/bits/locale.h"
  "/usr/include/aarch64-linux-gnu/bits/long-double.h"
+ "/usr/include/aarch64-linux-gnu/bits/math-finite.h"
  "/usr/include/aarch64-linux-gnu/bits/math-vector.h"
  "/usr/include/aarch64-linux-gnu/bits/mathcalls-helper-functions.h"
  "/usr/include/aarch64-linux-gnu/bits/mathcalls.h"

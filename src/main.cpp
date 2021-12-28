@@ -18,15 +18,15 @@ int main(){
 	map<int,vector<int>> personstate;
 	map<int,int> classidmap;
 	bool is_first = true;
-	char* yolo_engine = "/home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/resources/yolov5s_v5.engine";
+	char* yolo_engine = "/home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/resources/yolov5s_drone_last.engine";
 	char* sort_engine = "/home/volta03/Multi_Object_Tracking_Vinit/PERCEPTION_ARTPARK/Object_tracking/yolov5-deepsort-tensorrt/resources/deepsort.engine";
-	float conf_thre = 0.4;
+	float conf_thre = 0.35;
 
 	Trtyolosort yosort(yolo_engine,sort_engine);
 	VideoCapture capture;
 	cv::Mat frame;
-	frame = capture.open("/dev/video0");
-	// frame = capture.open("../../../Datasets/test_video.mp4");
+	// frame = capture.open("/dev/video0");
+	frame = capture.open("../../../Datasets/d1.mp4");
 
 
 	if (!capture.isOpened()){

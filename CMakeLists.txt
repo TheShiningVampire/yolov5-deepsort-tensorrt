@@ -8,7 +8,7 @@ add_definitions(-std=c++11)
 add_definitions(-DAPI_EXPORTS)
 option(CUDA_USE_STATIC_CUDA_RUNTIME OFF)
 set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_BUILD_TYPE Release)
+set(CMAKE_BUILD_TYPE Debug)
 
 find_package(CUDA REQUIRED)
 set(CUDA_NVCC_PLAGS ${CUDA_NVCC_PLAGS};-std=c++11;-g;-G;-gencode;arch=compute_53;code=sm_53)
